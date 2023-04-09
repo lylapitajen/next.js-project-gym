@@ -1,0 +1,24 @@
+@use "./variables";
+
+html {
+  height: 100%;
+  display: flex;
+}
+body {
+  margin: auto;
+}
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//TEXTS
+h2 {
+  @include section-heading();
+}
+h3 {
+  @include subheading();
+}

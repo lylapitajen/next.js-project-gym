@@ -1,0 +1,42 @@
+@import "./../variables";
+@import "./../shared";
+.memberships-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: $section-padding;
+}
+.memberships-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $section-col-gap;
+
+  .membership-card {
+    background-color: #191229;
+    border: $pink-border;
+    padding: $card-padding;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    h4 {
+      font-size: 5rem;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+    ul {
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+    &:hover {
+      background-color: #332652;
+      transform: translateY(-5px);
+    }
+  }
+}

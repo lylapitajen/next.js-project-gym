@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap");
+@import "variables";
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100%;
+  background-color: $col-dark-purple;
+  width: 100%;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: $col-dark-purple;
+  color: $col-offwhite;
+}
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: $col-offwhite;
+  padding-left: 0;
+}
+.margin {
+  width: 1320px;
+  max-width: calc(100% - 15rem);
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+ul {
+  margin-block: 0;
+  margin-inline: 0;
+}

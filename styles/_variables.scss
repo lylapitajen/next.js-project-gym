@@ -1,0 +1,29 @@
+//COLORS
+$col-offwhite: #f5f5f5;
+$col-offwhite-100: #e6e6e6;
+$col-dark-purple: #2f2642;
+$col-purple: #8c66d2;
+$col-purplepink: #b066d1;
+
+//TEXTS
+@mixin lg-heading() {
+  font-size: 6rem;
+  text-transform: uppercase;
+  line-height: 6rem;
+}
+@mixin section-heading() {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@mixin subheading() {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+$box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+$pink-border: 2px solid #b066d1;
+$section-padding: 3rem 0;
+$card-padding: 3rem 2rem;
+$section-col-gap: 3rem;

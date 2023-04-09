@@ -1,0 +1,22 @@
+@import "./../variables";
+.btn {
+  padding: 7px 15px;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $col-offwhite;
+
+  &.gradient {
+    background-image: linear-gradient($col-purple, $col-purplepink);
+  }
+
+  &.ghost {
+    background-color: #645a774a;
+    border: $pink-border;
+  }
+
+  &.large {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+}

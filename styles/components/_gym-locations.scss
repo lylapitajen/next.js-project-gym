@@ -1,0 +1,10 @@
+@import "./../variables";
+.gym-locations-section {
+  display: flex;
+  flex-direction: column;
+  gap: $section-col-gap;
+  padding: $section-padding;
+  .btn {
+    align-self: center;
+  }
+}

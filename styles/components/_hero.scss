@@ -1,0 +1,29 @@
+@use "./../variables";
+
+.hero-section {
+  background-image: url("/hero-img.jpg");
+  background-position: 10% 30%;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  width: 40%;
+  h2 {
+    @include lg-heading;
+  }
+  h4 {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+  }
+  .gradient-button {
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+  }
+}
