@@ -1,10 +1,38 @@
+@import "./../variables";
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  text-transform: uppercase;
+  height: $nav-height;
+  z-index: 100;
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    a:not(.btn) {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: $col-purplepink;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover::after {
+        transform: scale(1);
+        transform-origin: bottom left;
+      }
+    }
+    .btn {
+      padding: 7px 10px;
+    }
+  }
 }

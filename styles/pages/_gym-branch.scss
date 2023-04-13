@@ -1,0 +1,54 @@
+@import "./../variables";
+.gym-branch-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 3rem;
+  margin-top: $section-margin-top;
+  align-items: stretch;
+  .img-container {
+    flex: 0.8;
+    display: block;
+    position: relative;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 1rem;
+    img {
+      @include bordered-img();
+    }
+  }
+  .gym-info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 100%;
+    justify-content: space-between;
+    h1 {
+      margin: 0 0 8px 0;
+      line-height: 1;
+    }
+    .subheading {
+      font-weight: 600;
+      font-size: inherit;
+      color: $col-offwhite;
+      margin-bottom: 7px;
+    }
+    h2,
+    h3 {
+      font-size: inherit;
+      font-weight: 400;
+      line-height: 1.2;
+      color: $col-offwhite-100;
+    }
+  }
+  .gym-summary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    p {
+      color: $col-offwhite-100;
+      line-height: 1.1;
+    }
+  }
+}

@@ -4,19 +4,36 @@
   border-radius: 10rem;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 1.6rem;
   color: $col-offwhite;
+  border: none;
+  transition: transform 0.2s ease;
+  letter-spacing: 1px;
+  &:hover {
+    transform: translateY(-3px);
+  }
 
   &.gradient {
     background-image: linear-gradient($col-purple, $col-purplepink);
   }
 
   &.ghost {
-    background-color: #645a774a;
+    background-color: #645a7758;
     border: $pink-border;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 0 5px 3px #af66d17f;
+    }
   }
 
   &.large {
     padding: 1rem 2rem;
     font-size: 1.8rem;
+  }
+  &.small {
+    font-size: 1.4rem;
   }
 }

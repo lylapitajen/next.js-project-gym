@@ -10,14 +10,20 @@ const options = { type: "loop", autoplay: true, speed: 1000 };
 const GymLocations = () => {
   return (
     <div className="gym-locations-section">
-      <h2 className="margin">Our Gyms</h2>
+      <div className="margin">
+        <h2 className="section-heading">Our gyms</h2>
+        <h4 className="section-desc">
+          Each gym offers a premium fitness experience, a welcoming atmosphere
+          and a dedicated team.
+        </h4>
+      </div>
       <Splide aria-label="Gym locations" options={options}>
         {gymLocations.map((gym) => {
-          const { img, location } = gym;
+          const { img, text } = gym;
           return (
             <SplideSlide key={img}>
               <Image src={`/images/${img}`} fill={true}></Image>
-              <h3>{location}</h3>
+              <h3>{text}</h3>
             </SplideSlide>
           );
         })}

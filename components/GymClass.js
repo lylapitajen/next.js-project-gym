@@ -8,8 +8,8 @@ export const GymClass = ({ type, text, image }) => {
       >
         <Image src={image} fill={true}></Image>
       </div>
-      <h3>{type}</h3>
-      <h4>{text}</h4>
+      <h3 className="subheading">{type}</h3>
+      <p>{text}</p>
     </article>
   );
 };

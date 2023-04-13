@@ -1,0 +1,14 @@
+@import "./../variables";
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  .stars-container {
+    display: flex;
+    align-items: center;
+    .star {
+      fill: rgb(255, 221, 0);
+    }
+  }
+}

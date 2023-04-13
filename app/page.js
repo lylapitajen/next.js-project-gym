@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <Memberships />
+      <h2 className="section-heading margin">Memberships</h2>
+      <Memberships readMore={true} />
       <GymClasses />
       <GymLocations />
     </main>

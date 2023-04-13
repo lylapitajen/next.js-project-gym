@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: $section-col-gap;
-  padding: $section-padding;
+  margin-top: $section-margin-top;
   .btn {
     align-self: center;
   }

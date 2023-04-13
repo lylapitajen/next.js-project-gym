@@ -1,0 +1,11 @@
+ul {
+  li {
+    color: $col-offwhite-200;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    svg {
+      fill: $col-purplepink-100;
+    }
+  }
+}

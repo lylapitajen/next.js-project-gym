@@ -1,24 +1,26 @@
+import Link from "next/link";
 import { memberships } from "./../data/membershipsData";
 import MembershipCard from "./MembershipCard";
-const Memberships = () => {
-  console.log(memberships);
+import { nanoid } from "nanoid";
+const Memberships = ({ readMore }) => {
   return (
     <div className="margin memberships-section">
-      <h2>Memberships</h2>
+      <div>
+        <h4 className="section-desc">
+          Become a member today and enjoy exclusive benefits.
+        </h4>
+      </div>
       <div className="memberships-container">
-        {memberships.map((mem) => {
-          const { id, type, price, span, text } = mem;
-          return (
-            <MembershipCard
-              key={id}
-              type={type}
-              price={price}
-              span={span}
-              text={text}
-            />
-          );
+        {memberships.map((membership) => {
+          return <MembershipCard key={nanoid()} {...membership} />;
         })}
       </div>
+      {readMore && (
+        <Link className="read-more" href={"/memberships"}>
+          Read more
+          <span></span>
+        </Link>
+      )}
     </div>
   );
 };
