@@ -4,6 +4,7 @@ import Button from "./Button";
 import { reviews } from "@/data/reviewsData";
 import Rating from "./Rating";
 import "./../styles/_main.scss";
+import { nanoid } from "nanoid";
 const Reviews = () => {
   return (
     <section className="reviews-section">
@@ -20,7 +21,7 @@ const Reviews = () => {
 
       <div className="reviews-container">
         {reviews.map((review) => {
-          return <ReviewBubble {...review} />;
+          return <ReviewBubble key={nanoid()} {...review} />;
         })}
       </div>
     </section>

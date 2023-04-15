@@ -5,7 +5,10 @@ $col-offwhite-200: #c4c4c4;
 $col-offwhite-300: #b3b3b3;
 
 $col-dark-purple: #2f2642;
-$col-dark-purple-100: #595168;
+$col-dark-purple-100: #443c55;
+$col-dark-purple-200: #5951689b;
+$col-dark-purple-300: #595168;
+
 $col-purple: #8c66d2;
 $col-purplepink: #b066d1;
 $col-purplepink-100: #c894df;
@@ -22,4 +25,31 @@ $nav-height: 8rem;
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+@mixin contact-section() {
+  background-color: $col-dark-purple-100;
+  border-radius: 1rem;
+  display: flex;
+}
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin navText {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: $breakpoint * 1px) {
+    @content;
+  }
+}
+
+@mixin respondLarger($breakpoint) {
+  @media only screen and (min-width: ($breakpoint * 1px) + 1px) {
+    @content;
+  }
 }

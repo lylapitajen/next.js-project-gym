@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "../components/Navbar";
 import { Poppins } from "next/font/google";
 import "./../styles/_main.scss";
+import Sidenav from "@/components/Sidenav";
 
 export const metadata = {
   title: "Elite Fitness",
@@ -13,10 +14,10 @@ const poppins = Poppins({
 });
 
 export default function RootLayout({ children }) {
-  // const router = useRouter();
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <div id="overlay"></div>
         <Navbar />
         {children}
         <Footer />

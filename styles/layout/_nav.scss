@@ -4,14 +4,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: $nav-height;
-  z-index: 100;
-
+  z-index: 998;
+  img {
+    &.hidden {
+      opacity: 0;
+    }
+  }
   .nav-links {
+    @include respond(768) {
+      display: none;
+    }
+    @include navText();
     display: flex;
     gap: 2.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
     a:not(.btn) {
       position: relative;
       &::after {
@@ -20,7 +25,7 @@ nav {
         width: 100%;
         transform: scaleX(0);
         height: 2px;
-        bottom: -4px;
+        bottom: -7px;
         left: 0;
         background-color: $col-purplepink;
         transform-origin: bottom right;

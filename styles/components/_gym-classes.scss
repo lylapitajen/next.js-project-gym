@@ -11,9 +11,10 @@
     align-self: center;
   }
   .gym-classes-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 3rem;
+    row-gap: 4rem;
 
     .class-container {
       width: 100%;
@@ -22,21 +23,22 @@
       .img-container {
         position: relative;
         overflow: hidden;
+        border-radius: 1rem;
         img {
-          object-fit: cover;
+          @include bordered-img();
           transition: transform 0.2s ease;
           &:hover {
             transform: scale(1.1) rotate(1deg);
           }
         }
       }
-      h3 {
-        margin-top: 2rem;
+      .subheading {
+        margin: 2rem 0 0.8rem;
       }
       p {
         font-weight: 200;
         font-size: 1.3rem;
-        line-height: 1.4rem;
+        line-height: 1.2;
         color: $col-offwhite-100;
       }
     }

@@ -22,7 +22,11 @@ export default function AboutPage() {
         {gymLocations.map((gym) => {
           return (
             <div key={gym.img} className="img-container">
-              <Image src={`/images/${gym.img}`} fill={true} />
+              <Image
+                src={`/images/${gym.img}`}
+                fill={true}
+                alt="Gym location image"
+              />
             </div>
           );
         })}

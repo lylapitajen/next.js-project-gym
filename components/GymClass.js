@@ -6,7 +6,7 @@ export const GymClass = ({ type, text, image }) => {
         className="img-container"
         style={{ height: "60vh", maxWidth: "100%" }}
       >
-        <Image src={image} fill={true}></Image>
+        <Image src={image} fill={true} alt="Gym class image"></Image>
       </div>
       <h3 className="subheading">{type}</h3>
       <p>{text}</p>

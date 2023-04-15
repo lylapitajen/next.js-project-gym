@@ -2,6 +2,7 @@ import Link from "next/link";
 import { memberships } from "./../data/membershipsData";
 import MembershipCard from "./MembershipCard";
 import { nanoid } from "nanoid";
+
 const Memberships = ({ readMore }) => {
   return (
     <div className="margin memberships-section">

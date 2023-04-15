@@ -4,7 +4,7 @@ const FooterLinks = ({ links, subheading }) => {
   return (
     <div className="footer-section">
       <h2>{subheading}</h2>
-      <ul>
+      <ul className="footer-links">
         {links.map((link) => {
           return (
             <li key={nanoid()}>

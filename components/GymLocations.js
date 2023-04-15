@@ -22,7 +22,11 @@ const GymLocations = () => {
           const { img, text } = gym;
           return (
             <SplideSlide key={img}>
-              <Image src={`/images/${img}`} fill={true}></Image>
+              <Image
+                src={`/images/${img}`}
+                fill={true}
+                alt="Gym location image"
+              ></Image>
               <h3>{text}</h3>
             </SplideSlide>
           );

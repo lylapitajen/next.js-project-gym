@@ -1,0 +1,109 @@
+@import "./../variables";
+.contact-page {
+  @include respond(940) {
+    flex-direction: column;
+  }
+  display: flex;
+  margin-top: $section-margin-top;
+  gap: 5vw;
+  justify-content: center;
+  h3 {
+    font-weight: 400;
+    color: $col-offwhite-100;
+  }
+  .contact-form-container {
+    @include contact-section();
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 4rem;
+  }
+  .company-info-container {
+    @include respond(940) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 1.4rem;
+    .subheading {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .socials {
+      @include flexCenter;
+    }
+    .company-info-section {
+      @include respond(620) {
+        width: 100%;
+        gap: 3rem;
+      }
+      @include contact-section();
+      padding: 2rem 3rem;
+      gap: 1.5rem;
+      align-items: center;
+      width: 270px;
+      svg {
+        color: $col-purplepink;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          li {
+            color: $col-offwhite-100;
+          }
+        }
+      }
+    }
+  }
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  .names-container {
+    @include respond(550) {
+      flex-direction: column;
+      gap: 0;
+    }
+    display: flex;
+    gap: 2rem;
+  }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .form-label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .form-input {
+    margin-bottom: 1.5rem;
+    background-color: $col-dark-purple-200;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    min-height: 4rem;
+    &::placeholder {
+      color: $col-offwhite-100;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid $col-offwhite-200;
+      background-color: #827d8e;
+    }
+  }
+  textarea {
+    resize: none;
+    height: 6rem;
+  }
+  .btn {
+    margin-top: 2rem;
+  }
+}

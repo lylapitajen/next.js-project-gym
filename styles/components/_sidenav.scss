@@ -1,0 +1,38 @@
+@import "./../variables";
+
+.sidenav-container {
+  @include respondLarger(768) {
+    display: none;
+  }
+  background-color: $col-dark-purple-100;
+  height: 100vh;
+  width: 40rem;
+  max-width: 70%;
+  padding: 10rem 3rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-left: auto;
+  align-items: flex-end;
+  transform: translateX(100%);
+  transition: transform 0.2s ease;
+  &.animate-in {
+    transform: translateX(0);
+    backdrop-filter: blur(50px);
+  }
+  .sidenav-links {
+    @include navText();
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 2rem;
+    align-items: flex-end;
+  }
+  .socials {
+    .subheading {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      text-align: right;
+    }
+  }
+}

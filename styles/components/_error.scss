@@ -7,15 +7,12 @@
   gap: 1rem;
   text-align: center;
   svg {
-    filter: drop-shadow(0 0 20px $col-purplepink-100);
+    filter: drop-shadow(0 0 10px #7052a8);
     transform: rotate(-45deg);
   }
   h1 {
     font-size: 10vw;
     line-height: 1;
-    span {
-      transform: rotate(-40deg);
-    }
   }
   h2 {
     font-size: 2rem;

@@ -22,7 +22,7 @@ export const reviews = [
   {
     user: "Lilo & Yogi",
     review:
-      "I am a professional natural bodybuilder but the kit at Gym Group is 1st rate! So much so that I choose to train legs here rather than my personal training place of work - another well known gym chain! Love the investment in other new leg equipment too!",
+      "I am a professional natural bodybuilder but the kit at Gym Group is 1st rate! So much so that I choose to train legs here rather than my personal training place of work.",
     rating: 5,
     delay: 0.4,
   },

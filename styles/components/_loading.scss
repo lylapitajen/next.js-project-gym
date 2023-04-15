@@ -1,0 +1,15 @@
+@import "./../variables";
+.loading {
+  svg {
+    color: $col-purplepink;
+    animation: spin 1s infinite 0.8s;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

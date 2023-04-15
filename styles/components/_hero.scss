@@ -2,6 +2,7 @@
 
 .hero-section {
   background-image: url("/hero-img.jpg");
+  background-position: 80% 0;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -9,12 +10,30 @@
   transform: translateY(-$nav-height);
   padding-top: $nav-height;
 
+  @include respond(1200) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("/hero-img.jpg");
+  }
+  @include respond(1070) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("/hero-img.jpg");
+    background-position: 85% 0;
+  }
   .hero-content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
-    width: 40%;
+    width: 600px;
+    max-width: 100%;
     h4 {
       font-size: 3rem;
       line-height: 1;

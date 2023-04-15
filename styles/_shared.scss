@@ -8,18 +8,11 @@ body {
   margin: auto;
 }
 
-@mixin flexCenter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 //TEXTS
 .page-title {
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: $section-margin-top;
 }
 .large-heading {
   font-size: 6rem;
@@ -44,13 +37,12 @@ body {
 }
 .social-links {
   display: flex;
-  gap: 1rem;
-  padding-top: 1rem;
+  gap: 2rem;
   svg {
     transition: all 0.2s ease;
     &:hover {
       transform: translateY(-1px);
-      fill: $col-purplepink-100;
+      fill: $col-purplepink-100 !important;
       filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.7));
     }
   }

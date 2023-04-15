@@ -1,5 +1,8 @@
 @import "./../variables";
 @import "./../shared";
+.memberships-page {
+  margin-top: $section-margin-top;
+}
 .memberships-section {
   display: flex;
   flex-direction: column;
@@ -8,6 +11,7 @@
     display: flex;
     align-items: center;
     color: $col-offwhite-100;
+    align-self: flex-end;
     &:hover {
       color: $col-offwhite;
       span {
@@ -52,7 +56,7 @@
 }
 .memberships-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
   gap: $section-col-gap;
 
   .membership-card {
@@ -77,11 +81,14 @@
     }
     ul {
       margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
     }
     .banner {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: -1px;
+      right: -1px;
       background-color: $col-purplepink;
       padding: 8px 10px;
       border-bottom-left-radius: 1rem;

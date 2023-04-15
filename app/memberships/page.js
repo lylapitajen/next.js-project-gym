@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function MembershipsPage() {
   return (
-    <main>
+    <main className="memberships-page">
       <h1 className="margin page-title">Memberships</h1>
       <Memberships />
       <div className="memberships-text margin">

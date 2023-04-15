@@ -7,8 +7,13 @@
       z-index: 5;
       display: flex;
       flex-direction: column;
-      width: 70%;
       h3 {
+        @include respond(650) {
+          font-size: 2.5 rem;
+        }
+        @include respond(560) {
+          font-size: 2rem;
+        }
         font-size: 3rem;
         line-height: 4rem;
         text-transform: uppercase;
@@ -16,6 +21,17 @@
         color: $col-offwhite-100;
       }
       h2 {
+        @include respond(840) {
+          font-size: 6rem;
+        }
+        @include respond(650) {
+          font-size: 5rem;
+        }
+        @include respond(560) {
+          font-size: 4rem;
+          line-height: 1.1;
+        }
+        max-width: 100%;
         font-size: 7rem;
         line-height: 7rem;
         text-transform: uppercase;
@@ -26,34 +42,55 @@
     }
   }
   .gym-images-container {
-    padding: 1rem;
-    display: flex;
-    gap: 1rem;
+    @include respond(680) {
+      margin-top: 0;
+    }
+    @include respond(460) {
+      padding: 0;
+      width: 100%;
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 2rem;
+    row-gap: 2rem;
     margin-top: 5rem;
+    padding: 2rem;
     .img-container {
       position: relative;
-      height: 50vh;
-      width: 20%;
+      height: 40vh;
 
       &:nth-of-type(1) {
         margin-top: 5rem;
       }
       &:nth-of-type(2) {
         margin-top: 10rem;
+        @include respond(460) {
+          display: none;
+        }
       }
       &:nth-of-type(3) {
         margin-top: 0;
+        @include respond(680) {
+          display: none;
+        }
       }
       &:nth-of-type(4) {
         margin-top: 8rem;
+        @include respond(900) {
+          display: none;
+        }
       }
       &:nth-of-type(5) {
         margin-top: 3rem;
+        @include respond(1120) {
+          display: none;
+        }
       }
       img {
-        object-fit: cover;
-        border-radius: 1rem;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+        @include bordered-img();
+        @include respond(460) {
+          border-radius: 0;
+        }
       }
     }
   }
@@ -79,6 +116,7 @@
         font-weight: 600;
         letter-spacing: 1px;
         color: $col-offwhite-200;
+        margin-bottom: 1rem;
       }
       .social-links {
         display: flex;

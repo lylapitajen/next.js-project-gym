@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: $section-col-gap;
   .reviews-top-section {
-    background-color: $col-dark-purple-100;
+    background-color: $col-dark-purple-300;
     border-radius: 1rem;
     padding: 1.5rem 2rem;
     display: flex;
@@ -25,21 +25,31 @@
 }
 //REVIEW BUBBLE
 .reviews-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-
+  @include respond(670) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 2rem;
+  row-gap: 2rem;
   .review-bubble {
+    @include respond(670) {
+      width: 100%;
+    }
     background-color: $col-dark-purple-100;
-    width: 30rem;
-    height: auto;
+    height: fit-content;
     padding: 1.5rem 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     position: relative;
     z-index: 5;
     animation: mini-bounce 8s infinite var(--delay);
     &::before {
+      @include respond(670) {
+        display: none;
+      }
       content: "";
       position: absolute;
       width: 0;

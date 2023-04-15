@@ -3,13 +3,15 @@ import Image from "next/image";
 import { navLinks } from "../data/layoutData";
 import "./../styles/_main.scss";
 import Button from "./Button";
+import Hamburger from "./Hamburger";
 const Navbar = () => {
   return (
     <nav className="margin nav-container">
       <Image
+        id="navbar-logo"
         src="/logoipsum-290.svg"
-        height={50}
-        width={50}
+        height={70}
+        width={70}
         alt="Elite Fitness logo"
       />
       <ul className="nav-links">
@@ -28,6 +30,7 @@ const Navbar = () => {
           );
         })}
       </ul>
+      <Hamburger />
     </nav>
   );
 };
