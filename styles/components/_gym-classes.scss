@@ -24,8 +24,11 @@
         position: relative;
         overflow: hidden;
         border-radius: 1rem;
+        filter: drop-shadow(3px 3px 7px #8c66d265);
         img {
           @include bordered-img();
+          border: 1px solid $col-purplepink-100;
+          filter: drop-shadow(5px 5px 10px $col-purplepink);
           transition: transform 0.2s ease;
           &:hover {
             transform: scale(1.1) rotate(1deg);

@@ -43,6 +43,9 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 3px;
+        @include respond(640) {
+          gap: 7px;
+        }
       }
       a {
         color: $col-offwhite-200;

@@ -27,12 +27,12 @@ const GymLocation = ({ params }) => {
       <div className="gym-info-container">
         <div>
           <h1 className="page-title">{text}</h1>
-          <h2>
+          <h3>
             {address}
             <br /> {text}
             <br />
             {postcode}
-          </h2>
+          </h3>
         </div>
         <div>
           <h2 className="subheading">Contact</h2>

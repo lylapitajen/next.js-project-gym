@@ -16,11 +16,25 @@
     flex-direction: column;
     gap: 3rem;
     padding: 3rem 4rem;
+    .page-title {
+      @include respond(450) {
+        font-size: 3.3rem;
+      }
+    }
+    h3 {
+      line-height: 1.2;
+    }
   }
   .company-info-container {
     @include respond(940) {
-      flex-direction: row;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      column-gap: 2rem;
+      row-gap: 3rem;
+      justify-items: center;
+    }
+    @include respond(610) {
+      justify-items: left;
     }
     display: flex;
     flex-direction: column;
@@ -34,9 +48,11 @@
       @include flexCenter;
     }
     .company-info-section {
-      @include respond(620) {
-        width: 100%;
-        gap: 3rem;
+      @include respond(610) {
+        width: 320px;
+      }
+      @include respond(370) {
+        width: 300px;
       }
       @include contact-section();
       padding: 2rem 3rem;

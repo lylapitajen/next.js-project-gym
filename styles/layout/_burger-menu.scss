@@ -2,10 +2,12 @@
 .burger-menu {
   width: 40px;
   height: 20px;
-  position: relative;
+  position: fixed;
+  right: 2.5rem;
   z-index: 999;
   cursor: pointer;
   display: none;
+  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.3));
   @media screen and (max-width: 768px) {
     display: inline-block;
   }
