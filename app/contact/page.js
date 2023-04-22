@@ -1,22 +1,14 @@
-import { headOffice } from "@/data/headOfficeData";
 import ContactForm from "@/components/ContactForm";
 import SocialLinks from "@/components/SocialLinks";
 import ContactPageSection from "@/components/ContactPageSection";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { BiMapPin } from "react-icons/bi";
 import { HiOutlineMail } from "react-icons/hi";
+import { getHeadOfficeData } from "@/lib/api/headOffice";
 
-const ContactPage = () => {
-  const {
-    openingDays,
-    openingHours,
-    streetAddress,
-    city,
-    postcode,
-    country,
-    phone,
-    email,
-  } = headOffice;
+const ContactPage = async () => {
+  const headOffice = await getHeadOfficeData();
+  const { openingDays, openingHours, streetAddress, city, postcode, country, phone, email } = headOffice;
 
   return (
     <main className="contact-page margin">
@@ -34,16 +26,8 @@ const ContactPage = () => {
           subheading="Opening hours"
           array={[openingDays, openingHours]}
         />
-        <ContactPageSection
-          Icon={BiMapPin}
-          subheading="Address"
-          array={[streetAddress, city, country, postcode]}
-        />
-        <ContactPageSection
-          Icon={HiOutlineMail}
-          subheading="Support"
-          array={[email, phone]}
-        />
+        <ContactPageSection Icon={BiMapPin} subheading="Address" array={[streetAddress, city, country, postcode]} />
+        <ContactPageSection Icon={HiOutlineMail} subheading="Support" array={[email, phone]} />
         <section className="socials">
           <h2 className="subheading">Follow us</h2>
           <SocialLinks />

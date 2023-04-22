@@ -2,7 +2,6 @@ import Footer from "@/components/Footer";
 import Navbar from "../components/Navbar";
 import { Poppins } from "next/font/google";
 import "./../styles/_main.scss";
-import Sidenav from "@/components/Sidenav";
 
 export const metadata = {
   title: "Elite Fitness",

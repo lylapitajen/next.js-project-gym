@@ -3,15 +3,15 @@ import Button from "./Button";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import IconList from "./IconList";
 
-const MembershipCard = ({ type, price, span, text, banner }) => {
+const MembershipCard = ({ type, price, interval, textArray, banner }) => {
   return (
     <article className="membership-card">
       <h3 className="subheading">{type}</h3>
       <h4>
-        {price}
-        {span ? <span>{span}</span> : ""}
+        £{price}
+        {interval ? <span>{interval}</span> : ""}
       </h4>
-      <IconList array={text} Icon={AiOutlineCheckCircle} />
+      <IconList array={textArray.map(({ text }) => text)} Icon={AiOutlineCheckCircle} />
       {banner && (
         <div className="banner">
           <p>{banner}</p>

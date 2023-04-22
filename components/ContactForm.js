@@ -11,10 +11,6 @@ const defaultEnquiry = {
 const ContactForm = () => {
   const [enquiry, setEnquiry] = useState(defaultEnquiry);
 
-  //   useEffect(() => {
-  //     console.log(enquiry);
-  //   }, [enquiry]);
-
   const handleChange = (e) => {
     setEnquiry({ ...enquiry, [e.target.name]: e.target.value });
   };
@@ -23,13 +19,7 @@ const ContactForm = () => {
     setEnquiry(defaultEnquiry);
   };
   return (
-    <form
-      className="contact-form"
-      id="contact"
-      action=""
-      method="post"
-      onSubmit={handleSubmit}
-    >
+    <form className="contact-form" id="contact" action="" method="post" onSubmit={handleSubmit}>
       <div className="names-container">
         <div className="form-row">
           <label className="form-label" htmlFor="fname">

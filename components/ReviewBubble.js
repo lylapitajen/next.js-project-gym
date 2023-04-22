@@ -1,8 +1,7 @@
 import Rating from "./Rating";
-import "./../styles/_main.scss";
-const reviewBubble = ({ user, review, rating, delay }) => {
+const reviewBubble = ({ user, review, rating }) => {
   return (
-    <div className="review-bubble" style={{ "--delay": `${delay}s` }}>
+    <div className="review-bubble">
       <div className="review-content">
         <Rating rating={rating} />
         <h7 className="review">"{review}"</h7>

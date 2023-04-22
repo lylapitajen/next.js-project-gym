@@ -1,11 +1,11 @@
 import Image from "next/image";
 import ReviewBubble from "./ReviewBubble";
 import Button from "./Button";
-import { reviews } from "@/data/reviewsData";
 import Rating from "./Rating";
-import "./../styles/_main.scss";
-import { nanoid } from "nanoid";
-const Reviews = () => {
+import { getReviews } from "@/lib/api/reviews";
+
+const Reviews = async () => {
+  const reviews = await getReviews();
   return (
     <section className="reviews-section">
       <h2 className="section-heading">Reviews</h2>
@@ -21,7 +21,7 @@ const Reviews = () => {
 
       <div className="reviews-container">
         {reviews.map((review) => {
-          return <ReviewBubble key={nanoid()} {...review} />;
+          return <ReviewBubble key={review.id} {...review} />;
         })}
       </div>
     </section>

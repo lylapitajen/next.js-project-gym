@@ -1,21 +1,17 @@
 import FooterLinks from "./FooterLinks";
 import Image from "next/image";
 import { footerLinks } from "./../data/layoutData";
-import { gymLocations } from "@/data/gymLocationsData";
-import "./../styles/_main.scss";
+import { getGymLocations } from "@/lib/api/gymLocations";
 import SocialLinks from "./SocialLinks";
-const Footer = () => {
+
+const Footer = async () => {
+  const gymLocations = await getGymLocations({ fields: ["city", "slug"] });
   return (
     <footer>
       <div className="footer-container margin">
         <div className="footer-divider">
           <div className="footer-section">
-            <Image
-              src="/logoipsum-290.svg"
-              height={50}
-              width={50}
-              alt="Elite Fitness logo"
-            />
+            <Image src="/logoipsum-290.svg" height={50} width={50} alt="Elite Fitness logo" />
             <h2>Elite Fitness Gyms</h2>
             <p>info@elitefitness.co.uk</p>
             <p>01832544886</p>

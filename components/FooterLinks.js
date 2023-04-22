@@ -8,7 +8,7 @@ const FooterLinks = ({ links, subheading }) => {
         {links.map((link) => {
           return (
             <li key={nanoid()}>
-              <Link href={link.href}>{link.text}</Link>
+              <Link href={link.href || link.slug}>{link.text || link.city}</Link>
             </li>
           );
         })}
