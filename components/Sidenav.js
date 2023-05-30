@@ -39,25 +39,13 @@ const Sidenav = ({ active, burger, setSidenavActive }) => {
 
   return (
     <div className={`sidenav-container ${extraClass}`}>
-      <div
-        className="sidenav-links-container"
-        onClick={() => setSidenavActive(false)}
-      >
-        <Image
-          src="/logoipsum-290.svg"
-          height={70}
-          width={70}
-          alt="Elite Fitness logo"
-        />
+      <div className="sidenav-links-container" onClick={() => setSidenavActive(false)}>
+        <Image src="/logoipsum-290.svg" height={70} width={70} alt="Elite Fitness logo" />
         <ul className="sidenav-links">
           {navLinks.map((link, i) => {
             const { id, text, href } = link;
             return (
-              <li
-                className="sidenav-page-link"
-                key={id}
-                style={{ animationDelay: `${(i + 3) * 100}ms` }}
-              >
+              <li className="sidenav-page-link" key={id} style={{ animationDelay: `${(i + 3) * 100}ms` }}>
                 <Link href={href}>{text}</Link>
               </li>
             );

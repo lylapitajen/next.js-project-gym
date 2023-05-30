@@ -7,8 +7,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "127.0.0.1",
-        port: "1337",
+        hostname: "elitegymsapi.lylapitajen.com",
+        port: "1338",
         pathname: "/uploads/**",
       },
     ],

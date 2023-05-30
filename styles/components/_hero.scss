@@ -1,31 +1,21 @@
 @use "./../variables";
 
 .hero-section {
-  background-image: url("/hero-img.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url("/hero-img.jpg");
   background-position: 80% 0;
   background-size: cover;
-  height: 100vh;
+  height: 600px;
   display: flex;
   align-items: center;
   transform: translateY(-$nav-height);
   padding-top: $nav-height;
 
-  @include respond(1200) {
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0.2)
-      ),
-      url("/hero-img.jpg");
-  }
   @include respond(1070) {
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0.4)
-      ),
-      url("/hero-img.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url("/hero-img.jpg");
     background-position: 85% 0;
+  }
+  @include respond(570) {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url("/hero-img.jpg");
   }
   .hero-content {
     display: flex;
@@ -34,13 +24,22 @@
     align-items: flex-start;
     width: 600px;
     max-width: 100%;
+    .large-heading {
+      @include respond(500) {
+        font-size: 5rem;
+        line-height: 1;
+      }
+      span {
+        color: $col-purplepink;
+      }
+    }
     h4 {
+      @include respond(500) {
+        font-size: 2.4rem;
+      }
       font-size: 3rem;
       line-height: 1;
       font-weight: 400;
-    }
-    span {
-      color: $col-purplepink;
     }
     .btn {
       margin-top: 2rem;

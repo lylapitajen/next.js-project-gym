@@ -1,5 +1,4 @@
 import Button from "./Button";
-import straxios from "@/lib/axios";
 import LocationsCarousel from "./LocationsCarousel";
 
 const GymLocations = ({ gymLocations }) => {

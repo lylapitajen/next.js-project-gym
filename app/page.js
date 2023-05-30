@@ -9,6 +9,7 @@ export default async function Home() {
   const memberships = await getMemberships();
   const gymClasses = await getGymClasses();
   const gymLocations = await getGymLocations();
+  console.log("locations", gymLocations);
   return (
     <main>
       <HeroSection />
